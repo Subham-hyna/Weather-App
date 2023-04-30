@@ -1,0 +1,255 @@
+/* For Mobile Displays */
+@media(max-width:760px){
+    .navbar-brand{
+        font-size: 2rem;
+    }
+    .search-box{
+        margin: auto;
+        position: static;
+        display: block;
+        width: 20rem;
+    }
+    .forecast-subcontainer{
+        width:50rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:560px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+}
+
+@media(max-width:660px){
+    .forecast-subcontainer{
+        width:40rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:480px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+}
+
+@media(max-width:570px){
+    .forecast-subcontainer{
+        width:31rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:390px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+    form > textarea{
+      width:20rem;
+    }
+}
+@media(max-width:540px){
+    .details-subcontainer{
+       margin-left:-1px;
+    }
+    .second-container{
+        margin: 30px 30px;
+        gap:30px;
+    }
+    .forecast-subcontainer{
+        width:35rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:430px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+    .weather-subcontainer{
+        margin-left: -8%;
+    }
+    #cityName{
+        font-size: 520%;
+     }
+     #weather{
+        font-size: 200%;
+     }
+}
+
+@media (max-width:490px){
+    .forecast-subcontainer{
+        width:30rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:360px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+}
+@media (max-width:490px){
+    .forecast-subcontainer{
+        width:25rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:364px;
+        padding-top: 10px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+}
+@media (max-width:475px){
+    .forecast-subcontainer{
+        height: 450px;
+        justify-content: center;
+        gap: 20px;
+    }
+    .days-subcontainer{
+        display: none;
+    }
+    .line-days-subcontainer{
+        display: flex;
+    }
+    .weather-subcontainer{
+        margin-left: -22%;
+    }
+    #cityName{
+        font-size: 400%;
+     }
+     #weather{
+        font-size: 200%;
+     }
+}
+@media(max-width:420px){
+    .hr-subcontainer{
+        width:346px;
+    }
+    #cityName{
+        font-size: 350%;
+     }
+}
+@media(max-width:390px){
+    .details-subcontainer{
+        margin-left:-10px;
+     }
+     .forecast-subcontainer{
+        width:20rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:300px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+    #cityName{
+        font-size: 300%;
+     }
+    #weather{
+        font-size: 150%;
+     }
+}
+@media(max-width:370px){
+    form > textarea{
+        width:15rem;
+    }
+    .contact-icon-box{
+        gap:28px;
+    }
+}
+@media(max-width:325px){
+    .hr-subcontainer{
+        width:346px;
+    }
+    .details-subcontainer{
+        margin-left:-20px;
+     }
+    #cityName{
+       font-size: 250%;
+    }
+    #weather{
+       font-size: 125%;
+    }
+}
+@media(max-width:290px){
+    .details-subcontainer{
+        margin-left:-28px;
+     }
+     .navbar-brand{
+        font-size: 20%;
+     }
+}
+@media(max-width:305px){
+    .forecast-subcontainer{
+        width:3rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:30px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+}
+
+
+/* For small displays */
+@media(max-width:346px){
+    .navbar-brand{
+        font-size: 1.5rem;
+    }
+    .search-box{
+
+        width: 16.8rem;
+    }
+     .subcontainer-row{
+        gap: 1%;
+       
+    }
+    /* .first-container{
+        margin-left: auto;
+    } */
+    .forecast-subcontainer{
+        width:22rem;
+    }
+    .hr-subcontainer{
+        margin: 0 auto;
+        height: 100px;
+        width:255px;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+}
+
+@media (max-width:380px)and(min-width:350px){
+    .details-subcontainer {
+        margin-left: -43px;
+        width: 259px;
+    }
+}
+
+/* For matching */
+@media(max-width:1080px) and (min-width:990px){
+    .search-box{
+        width: 31%;
+    }
+}
+
+/* For Tablet Displays */
+@media(max-width:990px) and (min-width:760px){
+    .search-box{
+        width: 22rem;
+        right: 5rem;
+    }
+}
+
+@media (max-width:1250px){
+    .details-subcontainer{
+        order:2;
+    }
+}

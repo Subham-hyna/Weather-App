@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weathertoday</title>
+
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/dfafef7c19.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+    <!-- personalised cdn -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile.css">
+   
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600&family=Chakra+Petch&family=Edu+NSW+ACT+Foundation:wght@700&family=Indie+Flower&family=Lobster&family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,500,0,0" />
+</head>
+
+<body onload="startTime()">
+
+   <section id="title"> 
+   <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand " href="index.html" id="brand-first">Weather<span><em id="brand-last">today</em></span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#title">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <li>
+
+            </li>
+            
+        </ul>
+    </div>   
+</div>
+</nav>
+<div class="search-box">
+    <div class="search-row">
+        <input type="text" id="inputText" placeholder="Enter the place">
+        <button id="searchButton"><i class="fa-solid fa-magnifying-glass "></i></button>
+    </div>
+   </div>
+
+   <div class="first-container">
+    <div class="city-subcontainer">
+        <h1 class="weather-subcontainer"id="cityName">DELHI</h1>
+        <div>
+            <p id="weather">Mostly Cloudy</p><i id="mainWeatherIcon" class="fa-solid fa-cloud-sun fa-2xl material-symbols"></i>
+        </div>
+    </div>
+    <div class="temp-subcontainer">
+        <h1 id="temp">39&deg<span>C</span></h1>
+        <h3 id="date">04-8-2023</h3>
+        <p id="time">05 : 18 pm</p>
+    </div>
+   </div>
+   <div class="second-container">
+    <div class="details-subcontainer">
+       <div class="subcontainer-row">
+        <div class="subcontainer-card">
+            <p><i class="fa-solid fa-temperature-half fa-lg"></i></p>
+            <h6><strong><span id="feelsLike">43&deg</span> C</strong></h6>
+            <p>Feels like</p>
+        </div>
+        <div class="subcontainer-card">
+            <p><i class="fa-solid fa-wind  fa-lg"></i></p>
+            <h6><strong><span id="speed">22</span> Km/h</strong></h6>
+            <p id="direction">NNW</p>
+        </div>
+        <div class="subcontainer-card">
+            <p><i class="fa-solid fa-droplet fa-lg"></i></p>
+            <h6><strong><span id="humidity">45</span>%</strong></h6>
+            <p>Humidity</p>
+        </div>
+    </div>
+    <div class="subcontainer-row">
+        <div class="subcontainer-card">
+            <p id="sunIcon"><i class="fa-solid fa-house-tsunami fa-lg"></i></p>
+            <h6><strong id="sun">03:12</strong></h6>
+            <p id="sunEvent">Sun Rise</p>
+        </div>
+        <div class="subcontainer-card">
+            <p><i class="fa-regular fa-eye fa-lg"></i></p>
+            <h6><strong><span id="visibility">10</span> km</strong></h6>
+            <p>Visibility</p>
+        </div>
+        <div class="subcontainer-card">
+            <p><i class="fa-solid fa-gauge fa-lg"></i></p>
+            <h6><strong><span id="pressure">1010</span> hPa</strong></h6>
+            <p>Pressure</p>
+        </div>
+    </div>
+</div>
+    <div class="forecast-subcontainer">
+        <div class="hr-subcontainer">
+            <div class="subcontainer-card">
+                <i id="currentWeatherIcon" class="fa-solid fa-cloud-sun fa-xl material-symbols"></i>
+                <h6><strong><span id="currenttemp">43</span>&deg C</strong></h6>
+                <p id="currenttime">Now</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="time3WeatherIcon" class="fa-solid fa-cloud-sun fa-xl material-symbols"></i>
+                <h6><strong><span id="currenttemp3">43</span>&deg C</strong></h6>
+                <p id="currenttime3">03:00</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="time6WeatherIcon" class="fa-solid fa-cloud-sun fa-xl material-symbols"></i>
+                <h6><strong><span id="currenttemp6">43</span>&deg C</strong></h6>
+                <p id="currenttime6">06:00</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="time9WeatherIcon" class="fa-solid fa-cloud-sun fa-xl material-symbols"></i>
+                <h6><strong><span id="currenttemp9">43</span>&deg C</strong></h6>
+                <p id="currenttime9">09:00</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="time12WeatherIcon" class="fa-solid fa-cloud-sun fa-xl material-symbols"></i>
+                <h6><strong><span id="currenttemp12">43</span>&deg C</strong></h6>
+                <p id="currenttime12">12:00</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="time15WeatherIcon" class="fa-solid fa-cloud-sun fa-xl material-symbols"></i>
+                <h6><strong><span id="currenttemp15">43</span>&deg C</strong></h6>
+                <p id="currenttime15">15:00</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="time18WeatherIcon"class="fa-solid fa-cloud-sun fa-xl material-symbols"></i>
+                <h6><strong><span id="currenttemp18">43</span>&deg C</strong></h6>
+                <p id="currenttime18">18:00</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="time21WeatherIcon" class="fa-solid fa-cloud-sun fa-xl material-symbols"></i>
+                <h6><strong><span id="currenttemp21">43</span>&deg C</strong></h6>
+                <p id="currenttime21">21:00</p>
+            </div>
+            
+        </div>
+        
+        <div class="days-subcontainer">
+            <div class="subcontainer-card">
+                <i id="day2WeatherIcon" class="fa-solid fa-cloud-sun fa-2xl material-symbols"></i>
+                <h6><strong><span id="tempday2">43</span>&deg C</strong></h6>
+                <h5 id="dateday2">30/04</h5>
+                <p id="weatherday2">Rain</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="day3WeatherIcon" class="fa-solid fa-cloud-sun fa-2xl material-symbols"></i>
+                <h6><strong><span id="tempday3">43</span>&deg C</strong></h6>
+                <h5 id="dateday3">30/04</h5>
+                <p id="weatherday3">Rain</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="day4WeatherIcon" class="fa-solid fa-cloud-sun fa-2xl material-symbols"></i>
+                <h6><strong><span id="tempday4">43</span>&deg C</strong></h6>
+                <h5 id="dateday4">30/04</h5>
+                <p id="weatherday4">Rain</p>
+            </div>
+            <div class="subcontainer-card">
+                <i id="day5WeatherIcon" class="fa-solid fa-cloud-sun fa-2xl material-symbols"></i>
+                <h6><strong><span id="tempday5">43</span>&deg C</strong></h6>
+                <h5 id="dateday5">30/04</h5>
+                <p id="weatherday5">Rain</p>
+            </div>
+
+        </div>
+        <div class="line-days-subcontainer">
+            <div class="upcomingdays-card">
+                <div><h5 id="linedateday2">30/04</h5></div>
+                <div class="subcontainer-card"><i id="day2LineWeatherIcon" class="fa-solid fa-cloud-sun fa-2xl material-symbols"></i>
+                <p id="lineweatherday2">Rain</p>
+                </div>
+                <h6><strong><span id="linetempday2">43</span>&deg C</strong></h6>
+            </div>
+            <div class="upcomingdays-card">
+                <div><h5 id="linedateday3">01/04</h5></div>
+                <div class="subcontainer-card"><i id="day3LineWeatherIcon" class="fa-solid fa-cloud-sun fa-2xl material-symbols"></i>
+                <p id="lineweatherday3">Rain</p>
+                </div>
+                <h6><strong><span id="linetempday3">44</span>&deg C</strong></h6>
+            </div>
+            <div class="upcomingdays-card">
+                <div><h5 id="linedateday4">02/04</h5></div>
+                <div  class="subcontainer-card"><i id="day4LineWeatherIcon" class="fa-solid fa-cloud fa-2xl material-symbols"></i>
+                <p id="lineweatherday4">Rain</p>
+                </div>
+                <h6><strong><span id="linetempday4">45</span>&deg C</strong></h6>
+            </div>
+            <div class="upcomingdays-card">
+                <div><h5 id="linedateday5">03/04</h5></div>
+                <div class="subcontainer-card"><i id="day5LineWeatherIcon" class="fa-solid fa-cloud-showers-heavy fa-2xl material-symbols"></i>
+                <p id="lineweatherday5">Rain</p>
+                </div>
+                <h6><strong><span id="linetempday5">46</span>&deg C</strong></h6>
+            </div>
+
+        </div>
+    </div>
+   
+</section>
+<section id="about">
+    <div class="about-title"><h3>About the Site</h3></div>
+    <div class="about-description"><p>Welcome to our basic weather website, a comprehensive platform designed to provide you with accurate and up-to-date weather information, all built using frontend technologies. With a clean and intuitive user interface, our website offers a range of features and utilizes various technologies to deliver a seamless weather experience.</p>
+
+        <p>At the heart of our website is the ability to search for any location and instantly access the current weather conditions. By simply entering a city or a specific address, users can retrieve real-time weather data, including temperature, humidity, wind speed, and more. This feature enables you to stay informed about the weather conditions in your area or any other location of interest.</p>
+        
+        <p>Planning your day or week ahead becomes effortless with our website's hourly and daily forecast options. By providing detailed weather predictions for the next 5 days, you can easily plan outdoor activities or make informed decisions about travel arrangements. These forecasts offer valuable insights into temperature fluctuations, precipitation chances, and other essential weather parameters, helping you stay prepared and make the most of your day.</p>
+    
+        <p>Our website is designed with responsiveness in mind. It seamlessly adapts to different screen sizes and devices, ensuring a consistent and user-friendly experience across desktops, tablets, and mobile phones. Whether you are at home, on the go, or at work, you can easily access the weather information you need with optimal viewing and interaction capabilities.</p>
+        
+        <p>To bring all these features together, we employed a combination of frontend technologies. HTML was used to structure and create the website layout, while CSS played a crucial role in styling the website and enhancing its visual appeal. JavaScript, the backbone of interactivity, was leveraged to implement dynamic features such as the search function and real-time weather data display. By utilizing the OpenWeatherMap API, we seamlessly retrieve weather information from a reliable source and integrate it into our website. In addition to this we also used the Google API for autocomplete of the places name. Lastly, the use of Bootstrap, a popular CSS framework, allowed us to create a responsive design, optimizing the website for various devices and screen sizes.</p>
+        
+        <p>In conclusion, our basic weather website is a user-friendly platform that provides accurate weather information using frontend technologies. With features such as real-time weather conditions, hourly and daily forecasts, we strive to keep you well-informed and prepared for any weather situation. Enjoy the simplicity and convenience of our website as you navigate through the ever-changing elements.</p>
+    </div>
+</section>
+<section id="contact">
+    <div class="contact-box">
+    <div class="contact-title">
+        <div><h3>Contact</h3></div>
+        <p>9365765523</p>
+        <p>dsubham490@gmail.com</p>
+    </div>
+    <div class="contact-icon-box">
+        <a href="https://www.facebook.com/subham.dutta.37604303/" target="g"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_________.subham/?next=%2F" target="g"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/Subham03036707" target="g"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/subhamDutta02" target="g"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <form action="mailto:dsubham490@gmail.com">
+        <label for="textMessage"></label><br>
+        <textarea name="Your Message" placeholder="Write your message here" id="textMessage" cols="60" rows="7"></textarea>
+        <br>
+        <input type="submit">
+        <div><a href="#title"><i class="fa-solid fa-arrow-up fa-2xl back-top"></i></a></div>
+    </form>
+</div>
+</section>
+<section id="footer">
+    <h6 class="date-time-zone">Date and Time are on Indian Standard Time</h6>
+    <h6 class="copyright">Copyright Reserved @subham</h6>
+</section>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk800AjRk_UgJ-5cb8OAZApNTL_vixfh0&callback=initialize&libraries=places" type="text/javascript"></script>
+
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- personalised script -->
+    <script src="index.js"></script>
+</body>
+</html>

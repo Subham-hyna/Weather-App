@@ -54,36 +54,9 @@ async function checkWeather(city){
     $("#linedateday3").html(date(data.dt+(2*86400)));
     $("#linedateday4").html(date(data.dt+(3*86400)));
     $("#linedateday5").html(date(data.dt+(4*86400)));
-    if((data.weather[0].main==="Clear") && ((presentTime>sunSet)||(presentTime<sunRise))){
-    $("#mainWeatherIcon").attr("class","fa-solid fa-moon fa-2xl material-symbols")   
-    $("#currentWeatherIcon").attr("class","fa-solid fa-moon fa-2xl material-symbols")   
-}
-else if((data.weather[0].main==="Clear") && ((presentTime>sunRise)&&(presentTime<sunSet))){
-    $("#mainWeatherIcon").attr("class","fa-solid fa-sun fa-2xl material-symbols")    
-    $("#currentWeatherIcon").attr("class","fa-solid fa-sun fa-2xl material-symbols")   
-    }
-    $("#mainWeatherIcon").attr("class",weatherIcon(data.weather[0].main))    
-    $("#currentWeatherIcon").attr("class",weatherIcon(data.weather[0].main))    
-    function weatherIcon(data){
-        if(data==='Clouds'){
-            return "fa-sharp fa-solid fa-cloud fa-2xl material-symbols";
-        }
-        else if(data==="Haze" || data==="Smoke"){
-            return "fa-solid fa-smog fa-2xl material-symbols";
-        }
-        else if(data==="Rain"){
-            return "fa-solid fa-cloud-rain fa-2xl material-symbols";
-        }
-        else if(data="Mist"){
-            return "fa-solid fa-water fa-2xl material symbols"
-        }
-        else if(data=="Cloudy-sun"){
-            return "fa-solid fa-cloud-sun fa-xl material-symbols";
-        }
-        else if(data==="Clear"){
-            return "fa-solid fa-cloud-sun fa-2xl material-symbols";
-        }
-    }
+    var iconUrl = "https://openweathermap.org/img/wn/"+data.weather[0].icon+"@2x.png";
+    $("#mainWeatherIcon").attr("src",iconUrl);
+    $("#currentWeatherIcon").attr("src",iconUrl);
 
 }
 //Async function for OpenWeatherApi #hours/5days API
@@ -128,41 +101,21 @@ async function checkForecast(city){
     $("#lineweatherday3").html(data.list[17].weather[0].main);
     $("#lineweatherday4").html(data.list[25].weather[0].main);
     $("#lineweatherday5").html(data.list[33].weather[0].main);
-    $("#time3WeatherIcon").attr("class",weatherIcon(data.list[0].weather[0].main)) 
-    $("#time6WeatherIcon").attr("class",weatherIcon(data.list[1].weather[0].main)) 
-    $("#time9WeatherIcon").attr("class",weatherIcon(data.list[2].weather[0].main)) 
-    $("#time12WeatherIcon").attr("class",weatherIcon(data.list[3].weather[0].main)) 
-    $("#time15WeatherIcon").attr("class",weatherIcon(data.list[4].weather[0].main)) 
-    $("#time18WeatherIcon").attr("class",weatherIcon(data.list[5].weather[0].main)) 
-    $("#time21WeatherIcon").attr("class",weatherIcon(data.list[6].weather[0].main)) 
-    $("#day2WeatherIcon").attr("class",weatherIcon(data.list[9].weather[0].main))
-    $("#day3WeatherIcon").attr("class",weatherIcon(data.list[17].weather[0].main))
-    $("#day4WeatherIcon").attr("class",weatherIcon(data.list[25].weather[0].main))
-    $("#day5WeatherIcon").attr("class",weatherIcon(data.list[33].weather[0].main))
-    $("#day2LineWeatherIcon").attr("class",weatherIcon(data.list[9].weather[0].main))
-    $("#day3LineWeatherIcon").attr("class",weatherIcon(data.list[17].weather[0].main))
-    $("#day4LineWeatherIcon").attr("class",weatherIcon(data.list[25].weather[0].main))
-    $("#day5LineWeatherIcon").attr("class",weatherIcon(data.list[33].weather[0].main))
-    function weatherIcon(data){
-        if(data==='Clouds'){
-            return "fa-sharp fa-solid fa-cloud fa-2xl material-symbols";
-        }
-        else if(data==="Clear"){
-            return "fa-solid fa-cloud-sun fa-2xl material-symbols";
-        }
-        else if(data==="Haze" || data==="Smoke"){
-            return "fa-solid fa-smog fa-2xl material-symbols";
-        }
-        else if(data==="Rain"){
-            return "fa-solid fa-cloud-rain fa-2xl material-symbols";
-        }
-        else if(data="Mist"){
-            return "fa-solid fa-water fa-2xl material symbols"
-        }
-        else if(data=="Cloudy-sun"){
-            return "fa-solid fa-cloud-sun fa-xl material-symbols";
-        }
-    }
+    $("#time3WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[0].weather[0].icon +"@2x.png") 
+    $("#time6WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[1].weather[0].icon +"@2x.png") 
+    $("#time9WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[2].weather[0].icon +"@2x.png") 
+    $("#time12WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[3].weather[0].icon +"@2x.png")  
+    $("#time15WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[4].weather[0].icon +"@2x.png") 
+    $("#time18WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[5].weather[0].icon +"@2x.png") 
+    $("#time21WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[6].weather[0].icon +"@2x.png") 
+    $("#day2WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[9].weather[0].icon +"@2x.png") 
+    $("#day3WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[17].weather[0].icon +"@2x.png") 
+    $("#day4WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[25].weather[0].icon +"@2x.png") 
+    $("#day5WeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[33].weather[0].icon +"@2x.png") 
+    $("#day2LineWeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[9].weather[0].icon +"@2x.png") 
+    $("#day3LineWeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[17].weather[0].icon +"@2x.png") 
+    $("#day4LineWeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[25].weather[0].icon +"@2x.png") 
+    $("#day5LineWeatherIcon").attr("src","https://openweathermap.org/img/wn/"+ data.list[33].weather[0].icon +"@2x.png") 
 }
 
 //Google maps places auto complete API

@@ -14,10 +14,12 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:560px;
         overflow-x: scroll;
+        overflow-y: hidden;
         justify-content: start;
+        padding-top: 0px;
     }
 }
 
@@ -27,7 +29,7 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:480px;
         overflow-x: scroll;
         justify-content: start;
@@ -40,7 +42,7 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:390px;
         overflow-x: scroll;
         justify-content: start;
@@ -62,7 +64,7 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:430px;
         overflow-x: scroll;
         justify-content: start;
@@ -84,7 +86,7 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:360px;
         overflow-x: scroll;
         justify-content: start;
@@ -96,16 +98,15 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:364px;
-        padding-top: 10px;
         overflow-x: scroll;
         justify-content: start;
     }
 }
 @media (max-width:475px){
     .forecast-subcontainer{
-        height: 450px;
+        height: 580px;
         justify-content: center;
         gap: 20px;
     }
@@ -142,7 +143,7 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:300px;
         overflow-x: scroll;
         justify-content: start;
@@ -190,7 +191,7 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:30px;
         overflow-x: scroll;
         justify-content: start;
@@ -219,7 +220,7 @@
     }
     .hr-subcontainer{
         margin: 0 auto;
-        height: 100px;
+        height: 138px;
         width:255px;
         overflow-x: scroll;
         justify-content: start;
@@ -248,8 +249,8 @@
     }
 }
 
-@media (max-width:1250px){
-    .details-subcontainer{
-        order:2;
+@media (min-width:1250px){
+    .forecast-subcontainer{
+        order:1;
     }
 }
